@@ -32,8 +32,7 @@ bool Inventory::isEmpty() {
 
 // find an item in inventory
     bool Inventory::findInventory(Items *itemPtr){
-        
-        bool hasItem = false;
+    
         
         auto it = std::find(_container.begin(), _container.end(), itemPtr);
         
@@ -89,7 +88,8 @@ void Inventory::removeItem(Items* itemPtr) {
     bool hasItem = Inventory::findInventory(itemPtr);
     
     if (hasItem){
-        auto indexToRemove = _container.erase(_container.begin() + _itemPosn);
+       /* auto indexToRemove = */
+        _container.erase(_container.begin() + _itemPosn);
         std::cout << "Success! Item has been removed.\n";
     }
     else {

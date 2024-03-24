@@ -10,7 +10,7 @@
 #include "References.hpp"
 #include "Villages.hpp"
 #include "Inventory.hpp"
-
+#include "Items.hpp"
 
 
 int main() {
@@ -21,6 +21,15 @@ int main() {
         Villages kittyV     = Villages("The Kitty Catty", "->the Kitty Catty Village->", "");
         Villages shepherdV  = Villages("The Shepherd's Village", "There are bays of hay and herds of cows in the field next to the village", "You see Mr. Ramsbottom, the village elder.");
         Villages hutV       =  Villages("The Carpenters Town", "->the Capenters Town ->","");
+    
+    // Define the items and inventory
+    
+        Items cat = Items("Whiskerclaw the cat"," a mighty hunter of mice");
+        Items cow = Items("Mooella Cream the cow"," gives the most lucious cream milk");
+        Items boy = Items("Alden Shepherdson the shepherd boy"," the best cattle herder in the village");
+        Items hut = Items("Shepherd's Shelter"," a simple makeshift hut for the shepherd boy");
+    
+    
         
         
     // Define the Villages links
@@ -102,14 +111,15 @@ int main() {
 
                 do
                 {
-                    std::cout << "[5] Ask for a cow\n";
-                    std::cout << "[6] Ask for a cat\n";
-                    std::cout << "[7] Ask for boy\n";
+                    std::cout << "[5] Ask for a cat\n";
+                    std::cout << "[6] Ask for a cow\n";
+                    std::cout << "[7] Ask for a shepherd boy\n";
                     std::cout << "[8] Leave! There is nothing in " + current->getName() + " for me!\n";
                     wiyc();
                     std::cin >> action;
                     
                     if (action == 5) {
+                        
                         
                     } else if (action == 6) {
                         

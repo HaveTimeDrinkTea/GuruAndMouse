@@ -72,7 +72,7 @@ SO THAT I can be entertain and learn more about text-based adventure game develo
 ## Usage 
 
 ### Video Demo (Work in progress)
-![Video Demo (1 min) on Google Drive](https://drive.google.com/file/d/10QVwkPpu3T-CII2FiY4PhFMbhwFhFeju/view?usp=sharing)
+[Video Demo (1 min) on Google Drive](https://drive.google.com/file/d/10QVwkPpu3T-CII2FiY4PhFMbhwFhFeju/view?usp=sharing)
 
 
 ## Credits

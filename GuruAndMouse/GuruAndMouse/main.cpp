@@ -76,7 +76,7 @@ int main() {
                 
                 std::cout << "you are in the east \n";
                 std::cout << "Looking around " + current->getName() + " you see " + current->getDesc() + "\n";
-                std::cout << "You see this Person : " + current->getPerson() + "\n";
+                std::cout << "You see this Person and you ask : " + current->getPerson() + "\n";
                 std::cout << "\n";
                 wwtgd();
 

@@ -29,7 +29,7 @@ int main() {
         Items boy = Items("Alden Shepherdson the shepherd boy"," the best cattle herder in the village");
         Items hut = Items("Shepherd's Shelter"," a simple makeshift hut for the shepherd boy");
     
-    
+        Inventory guruInv = Inventory();
         
         
     // Define the Villages links
@@ -114,31 +114,73 @@ int main() {
                     std::cout << "[5] Ask for a cat\n";
                     std::cout << "[6] Ask for a cow\n";
                     std::cout << "[7] Ask for a shepherd boy\n";
-                    std::cout << "[8] Leave! There is nothing in " + current->getName() + " for me!\n";
+                    std::cout << "[8] Ask for someone to build a little hut\n";
+                    std::cout << "[9] Leave! There is nothing in " + current->getName() + " for me!\n";
                     wiyc();
                     std::cin >> action;
                     
-                    if (action == 5) {
+                    if (action == 5) 
+                    {
+                        std::cout << "\nOops! There are lots of cows here but no sign of any cats \n\n";
+                        std::cout << "\nAre you sure you are as wise as the Guru? What would the guru do? Please reconsider your choice.\n\n";
                         
+                    } 
+                    else if (action == 6)
+                    {
                         
-                    } else if (action == 6) {
+                        if (!guruInv.findInventory(&cat)) {
+                            std::cout << "\nOops! Why do need a cow without a cat? \n\n";
+                            std::cout << "\nAre you sure you are as wise as the Guru? What would the guru do? Please reconsider your choice.\n\n";
+                        } else {
+                            guruInv.addItem(&cow);
+                            guruInv.getInventory();
+                        }
                         
-                    } else if (action == 7) {
+                    } 
+                    else if (action == 7)
+                    {
+                        if (!guruInv.findInventory(&cow)) {
+                            std::cout << "\nOops! Why do need a shepherd boy without a cow? \n\n";
+                            std::cout << "\nAre you sure you are as wise as the Guru? What would the guru do? Please reconsider your choice.\n\n";
+                        } else {
+                            guruInv.addItem(&boy);
+                            guruInv.getInventory();
+                        }
                         
-                    } else if (action == 8)  {
+                    } 
+                    else if (action == 8)
+                    {
+                        std::cout << "\nOops! There are lots of cows here but no sign of any one who could build a hut \n\n";
+                        std::cout << "\nAre you sure you are as wise as the Guru? What would the guru do? Please reconsider your choice.\n\n";
+                    } 
+                    else if (action == 9)
+                    {
                         std::cout << "\nYou are at the exit of " + current->getName() +  ".\n\n";
-                    } else {
+                    } 
+                    else
+                    {
                         std::cout << "please enter a correct option.\n\n";
                         wiyc();
                         std::cin >> action;
                     }
-                }
-                while (action != 8);
-
-                
-                std::cout << "What do you think the guru should do?\n\n";
+                } while (action != 9);
+                break;
+                // end of case 1
+            case 2:
+            
                 
                 break;
+                // end of case 2
+            case 3:
+            
+                
+                break;
+                // end of case 2
+            case 4:
+            
+                
+                break;
+                // end of case 2
         }
 
     }

@@ -18,8 +18,8 @@ int main() {
 
     // Define the Villages
         Villages guruCave   = Villages("The Guru's Cave", "a very simple set up with only 1 thin straw mat for sleeping and a small little wooden tables with all his belongings: a spare set of clothes and a few apples for lunch.", "");
-        Villages kittyV     = Villages("The Kitty Catty", "->the Kitty Catty Village->", "");
-        Villages shepherdV  = Villages("The Shepherd's Village", "There are bays of hay and herds of cows in the field next to the village", "You see Mr. Ramsbottom, the village elder.");
+        Villages kittyV     = Villages("The Kitty Catty", "the village streets filled with playful kittens and elegant cats roam freely.", "Mrs. Kiki Purington");
+        Villages shepherdV  = Villages("The Shepherd's Village", "there are bays of hay and herds of cows in the field next to the village", "Mr. Ramsbottom, the village elder");
         Villages hutV       =  Villages("The Carpenters Town", "->the Capenters Town ->","");
     
     // Define the items and inventory
@@ -38,7 +38,7 @@ int main() {
     guruCave.linkedV[Directions(2)] = &kittyV;
     guruCave.linkedV[Directions(1)] = &shepherdV;
     
-    kittyV.linkedV[Directions(0)] = &kittyV;
+    kittyV.linkedV[Directions(0)] = &guruCave;
     kittyV.linkedV[Directions(1)] = &hutV;
     
     shepherdV.linkedV[Directions(2)] = &hutV;
@@ -56,17 +56,16 @@ int main() {
     std::cout << "**********************\n";
     std::cout << "The Guru And The Mouse\n";
     std::cout << "**********************\n";
-    std::cout << "Long long ago, there is a Guru living in a cave deep in the mountains. The Guru lives an extremely simple life.\n";
+    std::cout << "Long long ago, there is a Guru living in a cave deep in the mountains.\n The Guru lives an extremely simple life.\n";
     std::cout << "\nHis cave is to the north of 3 villages near him and he could see all of them from the entrance of his cave.";
-    std::cout << "\nIn the mornings as the sun rises, he likes to observe the shepherd boys moving the herd of cows to graze in the field. At noon, he amuses himself by looking at all the cats who hang around the village to the south bathing in the warm mid-day sun. In the evening, he can see the iron mongers and the carpenters working by the fires.\n";
-    std::cout << "\nHe is well respected agmonst the residents in these nearby villages and often agree to give them some blessings or words of wisdom whenever they needed some.\n";
-    std::cout << "\nUnlike many of the villagers he knows, the Guru is happy and content all the time. He is glad to have the wisdom of living a simple life and be content to be in the present moment at any given moment.\n";
+    std::cout << "\nIn the mornings as the sun rises, he likes to observe the shepherd boys moving the herd of cows to graze in the field. \nAt noon, he amuses himself by looking at all the cats who hang around the village to the south bathing in the warm mid-day sun. \nIn the evenings, he can see the iron mongers and the carpenters working late by the fires in the south east.\n";
+    std::cout << "\nThe Guru is well respected agmonst the residents in these nearby villages. \n He often agree to give them some blessings or words of wisdom whenever they needed some.\n";
+    std::cout << "\nUnlike many of the villagers the Guru knows, he is happy and content all the time. \nHe is glad to have the wisdom of living a simple life and be content to be in the present moment.\n";
     std::cout << "\n";
-    std::cout << "\n \n";
-    std::cout << "\n \n";
-    std::cout << "\n \n";
-    
-    std::cout << "\n";
+//    std::cout << "\n \n";
+//    std::cout << "\n \n";
+//    std::cout << "\n \n";
+//    std::cout << "\n";
     std::cout << "Looking around " + current->getName() + " you see " + current->getDesc() + "\n";
     std::cout << "\nOne evening, after coming back from giving a blessing, he saw a cute little mouse with a big grin on its face right by the little wooden table.\n";
     std::cout << "\nThe Guru was happy to have a little friend. However, as he preparing to change his clothes to get in bed, he realizes that the mouse had gnawed a hole in his clean clothes\n";
@@ -91,21 +90,26 @@ int main() {
         std::cout << "\nWhat is your choice? >>>> ";
         std::cin >> command;
         
+        if (command == 9) {
+            std::cout << "\n\n<sad> you have chosen to leave. Do come back soon! Bye!\n\n";
+        }
         cur_command = command;
+
+//                std::cout << "command is: " << command << "\n";
+//                std::cout << "current is: " << current << "\n";
         
         if(current->linkedV.find(command) != current->linkedV.end()) {
             current = (current->linkedV[command]);
         };
-        
-        std::cout << "command is: " << command << "\n";
-        std::cout << "cur_comman is: " << cur_command << "\n";
+//        std::cout << "current is: " << current << "\n";
+
         
         switch (command) {
             case 1:
                 
                 std::cout << "The Guru is in the East Village where the shepherds live. \n";
                 std::cout << "Looking around " + current->getName() + " you see " + current->getDesc() + "\n";
-                std::cout << "You see this Person and you ask : " + current->getPerson() + "\n";
+                std::cout << "You also see " + current->getPerson() + " and thought you could ask for his help.\n";
                 std::cout << "\n";
                 wwtgd();
 
@@ -121,8 +125,8 @@ int main() {
                     
                     if (action == 5) 
                     {
-                        std::cout << "\nOops! There are lots of cows here but no sign of any cats \n\n";
-                        std::cout << "\nAre you sure you are as wise as the Guru? What would the guru do? Please reconsider your choice.\n\n";
+                        std::cout << "\n\nOops! There are lots of cows here but no sign of any cats \n";
+                        std::cout << "Are you sure you are as wise as the Guru? What would the guru do? Please reconsider your choice.\n\n";
                         
                     } 
                     else if (action == 6)
@@ -130,7 +134,7 @@ int main() {
                         
                         if (!guruInv.findInventory(&cat)) {
                             std::cout << "\nOops! Why do need a cow without a cat? \n\n";
-                            std::cout << "\nAre you sure you are as wise as the Guru? What would the guru do? Please reconsider your choice.\n\n";
+                            std::cout << "Are you sure you are as wise as the Guru? What would the guru do? Please reconsider your choice.\n\n";
                         } else {
                             guruInv.addItem(&cow);
                             guruInv.getInventory();
@@ -140,8 +144,8 @@ int main() {
                     else if (action == 7)
                     {
                         if (!guruInv.findInventory(&cow)) {
-                            std::cout << "\nOops! Why do need a shepherd boy without a cow? \n\n";
-                            std::cout << "\nAre you sure you are as wise as the Guru? What would the guru do? Please reconsider your choice.\n\n";
+                            std::cout << "\nOops! Why do need a shepherd boy without a cow? \n";
+                            std::cout << "Are you sure you are as wise as the Guru? What would the guru do? Please reconsider your choice.\n\n";
                         } else {
                             guruInv.addItem(&boy);
                             guruInv.getInventory();
@@ -150,13 +154,13 @@ int main() {
                     } 
                     else if (action == 8)
                     {
-                        std::cout << "\nOops! There are lots of cows here but no sign of any one who could build a hut \n\n";
-                        std::cout << "\nAre you sure you are as wise as the Guru? What would the guru do? Please reconsider your choice.\n\n";
+                        std::cout << "\nOops! There are lots of cows here but no sign of any one who could build a hut.\n";
+                        std::cout << "Are you sure you are as wise as the Guru? What would the guru do? Please reconsider your choice.\n\n";
                     } 
                     else if (action == 9)
                     {
-                        std::cout << "\nYou are at the exit of " + current->getName() +  ".\n\n";
-                    } 
+                        std::cout << "\nYou are at the exit of Shepherd's Village.\n\n";
+                    }
                     else
                     {
                         std::cout << "please enter a correct option.\n\n";
@@ -167,20 +171,27 @@ int main() {
                 break;
                 // end of case 1
             case 2:
-            
+                std::cout << "The Guru is in the South Kitty Village where the cat loving villagers live. \n";
+                std::cout << "Looking around " + current->getName() + " you see " + current->getDesc() + "\n";
+                std::cout << "You also see " + current->getPerson() + " and thought you could ask for her help.\n";
+                std::cout << "\n";
+                wwtgd();
                 
                 break;
                 // end of case 2
-            case 3:
-            
-                
+            case 0:
+                std::cout << "The Guru is back at the guru's cave \n";
                 break;
-                // end of case 2
-            case 4:
-            
-                
-                break;
-                // end of case 2
+//            case 3:
+//            
+//                
+//                break;
+//                // end of case 2
+//            case 4:
+//            
+//                
+//                break;
+//                // end of case 2
         }
 
     }

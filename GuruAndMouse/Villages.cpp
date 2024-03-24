@@ -27,6 +27,7 @@ std::string Villages::getPerson() {
     return _person;
 }
 
+
 void Villages::setName(std::string newName) {
     {
         if (newName.empty()) {

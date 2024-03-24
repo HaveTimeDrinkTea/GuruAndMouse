@@ -9,6 +9,7 @@
 #include <map>
 #include "References.hpp"
 #include "Villages.hpp"
+#include "Inventory.hpp"
 
 
 

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6816D0872BB029EF009BEF4A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6816D0862BB029EF009BEF4A /* main.cpp */; };
 		6816D0922BB02ACF009BEF4A /* Villages.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6816D0902BB02ACF009BEF4A /* Villages.cpp */; };
-		6816D0952BB02B06009BEF4A /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6816D0932BB02B06009BEF4A /* GameState.cpp */; };
 		6816D0972BB03A52009BEF4A /* References.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6816D0962BB03A52009BEF4A /* References.cpp */; };
 		6816D09A2BB0405C009BEF4A /* Inventory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6816D0982BB0405C009BEF4A /* Inventory.cpp */; };
 		6816D09D2BB0420B009BEF4A /* Items.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6816D09B2BB0420B009BEF4A /* Items.cpp */; };
@@ -33,8 +32,6 @@
 		6816D08E2BB02A98009BEF4A /* References.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = References.hpp; sourceTree = SOURCE_ROOT; };
 		6816D0902BB02ACF009BEF4A /* Villages.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Villages.cpp; sourceTree = SOURCE_ROOT; };
 		6816D0912BB02ACF009BEF4A /* Villages.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Villages.hpp; sourceTree = SOURCE_ROOT; };
-		6816D0932BB02B06009BEF4A /* GameState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameState.cpp; sourceTree = SOURCE_ROOT; };
-		6816D0942BB02B06009BEF4A /* GameState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameState.hpp; sourceTree = SOURCE_ROOT; };
 		6816D0962BB03A52009BEF4A /* References.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = References.cpp; sourceTree = "<group>"; };
 		6816D0982BB0405C009BEF4A /* Inventory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Inventory.cpp; sourceTree = SOURCE_ROOT; };
 		6816D0992BB0405C009BEF4A /* Inventory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Inventory.hpp; sourceTree = SOURCE_ROOT; };
@@ -76,8 +73,6 @@
 				6816D09C2BB0420B009BEF4A /* Items.hpp */,
 				6816D0982BB0405C009BEF4A /* Inventory.cpp */,
 				6816D0992BB0405C009BEF4A /* Inventory.hpp */,
-				6816D0932BB02B06009BEF4A /* GameState.cpp */,
-				6816D0942BB02B06009BEF4A /* GameState.hpp */,
 				6816D0902BB02ACF009BEF4A /* Villages.cpp */,
 				6816D0912BB02ACF009BEF4A /* Villages.hpp */,
 				6816D08E2BB02A98009BEF4A /* References.hpp */,
@@ -147,7 +142,6 @@
 				6816D09D2BB0420B009BEF4A /* Items.cpp in Sources */,
 				6816D0922BB02ACF009BEF4A /* Villages.cpp in Sources */,
 				6816D0972BB03A52009BEF4A /* References.cpp in Sources */,
-				6816D0952BB02B06009BEF4A /* GameState.cpp in Sources */,
 				6816D09A2BB0405C009BEF4A /* Inventory.cpp in Sources */,
 				6816D0872BB029EF009BEF4A /* main.cpp in Sources */,
 			);
